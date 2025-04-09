@@ -1,0 +1,94 @@
+.text-editor {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* RTL/LTR direction support */
+.text-editor.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.text-editor.rtl .menu-bar {
+  flex-direction: row-reverse;
+}
+
+.text-editor.rtl .ProseMirror {
+  direction: rtl;
+  text-align: right;
+}
+
+.text-editor.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+.menu-bar {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  background-color: #f5f5f5;
+}
+
+.menu-bar button {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin: 0 2px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.menu-bar button:hover {
+  background-color: #f0f0f0;
+}
+
+.menu-bar button.is-active {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}
+
+.editor-content {
+  padding: 15px;
+  min-height: 200px;
+}
+
+.ProseMirror {
+  min-height: 200px;
+  outline: none;
+}
+
+.ProseMirror p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: #adb5bd;
+  pointer-events: none;
+  height: 0;
+}
+
+/* List alignment styles */
+.ProseMirror ul[data-text-align="center"] {
+  text-align: center;
+  list-style-position: inside;
+}
+
+.ProseMirror ul[data-text-align="right"] {
+  text-align: right;
+  list-style-position: inside;
+}
+
+.ProseMirror ol[data-text-align="center"] {
+  text-align: center;
+  list-style-position: inside;
+}
+
+.ProseMirror ol[data-text-align="right"] {
+  text-align: right;
+  list-style-position: inside;
+}

@@ -2,6 +2,36 @@ import React, { useState, useEffect } from "react";
 import TextEditor from "../../components/TextEditor/TextEditor";
 import "./LanguageEditorPage.css";
 
+const EditorSkeleton = () => {
+  return (
+    <div className="language-editor-page">
+      <div className="language-tabs skeleton-tabs">
+        <div className="skeleton-tab"></div>
+        <div className="skeleton-tab"></div>
+      </div>
+
+      <div className="editor-container skeleton-editor">
+        <div className="skeleton-toolbar">
+          {[...Array(10)].map((_, i) => (
+            <div key={i} className="skeleton-button"></div>
+          ))}
+        </div>
+        <div className="skeleton-content">
+          <div className="skeleton-line"></div>
+          <div className="skeleton-line" style={{ width: "85%" }}></div>
+          <div className="skeleton-line" style={{ width: "90%" }}></div>
+          <div className="skeleton-line" style={{ width: "75%" }}></div>
+          <div className="skeleton-line" style={{ width: "80%" }}></div>
+        </div>
+      </div>
+
+      <div className="save-container">
+        <div className="skeleton-save-button"></div>
+      </div>
+    </div>
+  );
+};
+
 const LanguageEditorPage = () => {
   const [pageData, setPageData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -112,7 +142,7 @@ const LanguageEditorPage = () => {
   };
 
   if (loading) {
-    return <div className="loading">Loading...</div>;
+    return <EditorSkeleton />;
   }
 
   if (error) {

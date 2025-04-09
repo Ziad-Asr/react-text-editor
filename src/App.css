@@ -43,24 +43,11 @@
 
 .App {
   text-align: center;
-  min-height: 100vh;
   background-color: #f9f9f9;
 }
 
-.App-header {
-  background-color: #282c34;
-  padding: 1.5rem;
-  color: white;
-  margin-bottom: 2rem;
-}
-
-.App-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-
 main {
-  padding: 0 1rem;
+  padding: 1rem;
   max-width: 1200px;
   margin: 0 auto;
 }

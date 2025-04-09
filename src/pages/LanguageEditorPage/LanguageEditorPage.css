@@ -9,6 +9,8 @@
 
 .language-tabs {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 0.5rem;
@@ -41,7 +43,7 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  min-height: 400px;
+  height: 500px;
 }
 
 .editor-wrapper {
@@ -94,4 +96,81 @@
   font-size: 1rem;
   color: #4caf50;
   min-height: 1.5rem;
+}
+
+/* Skeleton Loading Styles */
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.skeleton-tabs {
+  border-bottom: 1px solid #e6e6e6;
+  width: 100%;
+}
+
+.skeleton-tab {
+  width: 100px;
+  height: 36px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e6e6e6 50%, #f0f0f0 75%);
+  background-size: 468px 468px;
+  animation: shimmer 1.5s infinite linear;
+  border-radius: 4px 4px 0 0;
+}
+
+.skeleton-editor {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 1000px;
+  /* Make this responsive */
+}
+
+.skeleton-toolbar {
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.skeleton-button {
+  width: 40px;
+  height: 28px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e6e6e6 50%, #f0f0f0 75%);
+  background-size: 468px 468px;
+  animation: shimmer 1.5s infinite linear;
+}
+
+.skeleton-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.skeleton-line {
+  height: 18px;
+  width: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e6e6e6 50%, #f0f0f0 75%);
+  background-size: 468px 468px;
+  animation: shimmer 1.5s infinite linear;
+}
+
+.skeleton-save-button {
+  width: 160px;
+  height: 40px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e6e6e6 50%, #f0f0f0 75%);
+  background-size: 468px 468px;
+  animation: shimmer 1.5s infinite linear;
 }
